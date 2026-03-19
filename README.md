@@ -1,37 +1,32 @@
-# The Circadia Sense
+# Circadia Sense
 
-> An intelligent circadian lighting system that automatically adjusts LED color temperature throughout the day to support your natural sleep-wake cycle.
+> An intelligent circadian lighting system designed to support hospital patients affllicted with hospital-induced delirium (HID).
 
 ## Overview
 
-The Circadia Sense is an Arduino-based circadian lighting controller that synchronizes your indoor lighting with the natural progression of daylight. By automatically transitioning LED colors from energizing blue tones in the morning, to neutral white during the afternoon, and warm amber in the evening, this system helps regulate your circadian rhythm and improve sleep quality.
+An Arduino-based circadian lighting controller that synchronizes your indoor lighting with daylight. By automatically transitioning LED colors from energizing blue tones in the morning, to neutral white during the afternoon, and warm amber in the evening, this system helps regulate circadian rhythm and improve sleep quality.
 
 The system features gesture-based brightness control using an ultrasonic sensor, real-time clock synchronization, and an LCD display for time and mode information.
 
 ## Features
 
-- **Automatic Circadian Lighting**: Smoothly transitions between three lighting modes throughout the day
-- **Daytime (7:00 AM - 5:00 PM)**: Calm blue light to promote alertness and energy
-- **Afternoon (5:00 PM - 9:00 PM)**: Bright white light for optimal visibility
-- **Night (9:00 PM - 7:00 AM)**: Warm amber/orange light to encourage melatonin production
-
-- **👋 Gesture-Based Brightness Control**: Adjust LED brightness by moving your hand over the ultrasonic sensor (5-25cm range)
-
-- **⏰ Real-Time Clock Integration**: Automatic time tracking using Arduino R4 Minima's built-in RTC
-
-- **📺 LCD Display**: Shows current time (HH:MM format) and active lighting mode
-
-- **🌊 Smooth Color Transitions**: Gradual 30-minute fades between lighting modes prevent abrupt changes
+- **Daytime:** Calm blue light to promote alertness and energy
+- **Afternoon:** Bright white light for optimal visibility
+- **Night:** Warm amber/orange light to encourage melatonin production
+- **Gesture-Based Brightness Control:** Adjust LED brightness by moving your hand over the ultrasonic sensor (5-25cm range)
+- **Real-Time Clock Integration:** Automatic time tracking using Arduino R4 Minima's built-in RTC
+- **LCD Display:** Shows current time (HH:MM format) and active lighting mode
+- **Smooth LED Transitions:** Gradual 30-minute fades between lighting modes prevent abrupt changes
 
 ## Hardware Requirements
 
 ### Core Components
-- **Arduino R4 Minima** (with built-in RTC)
+- **Arduino R4 Minima** (built-in RTC)
 - **WS2812B NeoPixel LED Strip** (60 LEDs)
-- **16x2 LCD Display** (parallel interface)
+- **16x2 LCD Display**
 - **HC-SR04 Ultrasonic Distance Sensor**
 - **10kΩ Potentiometer** (for LCD contrast adjustment)
-- **5V External Power Supply** (for LED strip)
+- **5V External Power Supply**
 
 ### Wiring Specifications
 
@@ -51,8 +46,6 @@ The system features gesture-based brightness control using an ultrasonic sensor,
 
 ## Software Dependencies
 
-Install the following libraries via the Arduino IDE Library Manager:
-
 1. **Adafruit NeoPixel** (by Adafruit) - For controlling WS2812B LED strips
 2. **LiquidCrystal** (built-in) - For LCD display control
 3. **RTC** (built-in for Arduino R4 Minima) - For real-time clock functionality
@@ -61,12 +54,12 @@ Install the following libraries via the Arduino IDE Library Manager:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Bunz42/The-Circadia-Sense.git
-cd The-Circadia-Sense
+git clone https://github.com/Bunz42/circadia-sense.git
+cd circadia-sense
 ```
 
 ### 2. Hardware Setup
-1. Wire all components according to the pin configuration table above
+1. Wire all components according to the pin config table
 2. Connect the external 5V power supply to the LED strip
 3. Adjust the LCD contrast potentiometer until text is clearly visible
 
@@ -80,14 +73,14 @@ cd The-Circadia-Sense
    ```
 3. Edit the date and time to match your current time
 4. Upload to Arduino
-5. **Re-comment the RTC setup lines and upload again** (prevents time reset on every reboot)
+5. Re-comment the RTC setup lines and upload again (prevents time reset on every reboot)
 
 ## Usage
 
 ### Normal Operation
 Once programmed and powered on, the system operates autonomously:
 - LEDs automatically transition between modes based on time of day
-- Move your hand 5-25cm above the ultrasonic sensor to adjust brightness
+- Move your hand 5-25cm away from the ultrasonic sensor back and forth to adjust brightness (closer = brighter, further = dimmer)
 - LCD displays current time and active mode
 
 ### Demo Mode
@@ -165,11 +158,3 @@ Control the transition speed between modes:
 ## Demo
 
 Check out `circadia_sense.mp4` for a demonstration of the system in action!
-
-## License
-
-This project is open source and available for educational and personal use.
-
----
-
-**Note**: This project was developed as a Human Interface Device (HID) demonstration for circadian lighting control. The system is designed to support healthy sleep patterns through intelligent automated lighting.
