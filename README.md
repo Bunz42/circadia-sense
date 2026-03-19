@@ -10,10 +10,10 @@ The system features gesture-based brightness control using an ultrasonic sensor,
 
 ## Features
 
-- **🌅 Automatic Circadian Lighting**: Smoothly transitions between three lighting modes throughout the day
-  - **Daytime (7:00 AM - 5:00 PM)**: Calm blue light to promote alertness and energy
-  - **Afternoon (5:00 PM - 9:00 PM)**: Bright white light for optimal visibility
-  - **Night (9:00 PM - 7:00 AM)**: Warm amber/orange light to encourage melatonin production
+- **Automatic Circadian Lighting**: Smoothly transitions between three lighting modes throughout the day
+- **Daytime (7:00 AM - 5:00 PM)**: Calm blue light to promote alertness and energy
+- **Afternoon (5:00 PM - 9:00 PM)**: Bright white light for optimal visibility
+- **Night (9:00 PM - 7:00 AM)**: Warm amber/orange light to encourage melatonin production
 
 - **👋 Gesture-Based Brightness Control**: Adjust LED brightness by moving your hand over the ultrasonic sensor (5-25cm range)
 
