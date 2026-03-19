@@ -105,7 +105,7 @@ The-Circadia-Sense/
 │   └── LED_test.ino
 ├── lcd_test/                             # LCD display hardware test
 │   └── lcd_test.ino
-├── circadia_sense.mp4                    # Demo video
+├── circadia_sense.mov                    # Demo video
 └── README.md                             # This file
 ```
 
@@ -149,12 +149,6 @@ Control the transition speed between modes:
 - **Ethan Sun**
 - **Sidney Ruan**
 
-## Acknowledgments
-
-- Linear interpolation algorithm: Google Gemini Pro
-- Brightness mapping and smoothing: Google Gemini
-- Adafruit NeoPixel library: Adafruit Industries
-
 ## Demo
 
-Check out `circadia_sense.mp4` for a demonstration of the system in action!
+Download `circadia_sense.mov` and open it on your machine's media player for a demonstration of the system in action.
